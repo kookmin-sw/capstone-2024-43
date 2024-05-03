@@ -1,3 +1,5 @@
+/* global fetch*/
+
 // 하루 호출 5000건 제한
 
 /* 알라딘 API
@@ -59,7 +61,7 @@ outputs:
             ...
 */
 
-import { keys } from "./key.js";
+import { keys } from "./key.mjs";
 import { parseStringPromise } from "xml2js";
 
 Object.prototype.prettier = function() {
@@ -73,24 +75,24 @@ Object.prototype.prettier = function() {
             }
         }
     }
-}
+};
 
-export async function requestAladin(type, query_or_ISBN, options) {
+export async function requestAladin(type, query, options) {
     const params = {
         TTBKey: keys.aladin,
         Cover: "Big",
     };
 
     if (type === "search") {
-        Object.assign(params, {Query: query_or_ISBN});
+        Object.assign(params, {Query: query});
     } else {
         Object.assign(params, {
-            ItemId: query_or_ISBN,
+            ItemId: query,
             ItemIdType: "ISBN13",
         });
     }
     
-    Object.assign(params, options)
+    Object.assign(params, options);
 
     let url = `http://www.aladin.co.kr/ttb/api/${
         type === "search" ? "ItemSearch" : "ItemLookUp"

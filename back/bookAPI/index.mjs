@@ -1,4 +1,4 @@
-import { requestAladin } from './aladin.js'
+import { requestAladin } from './aladin.mjs'
 
 // Test
 (async () => {
