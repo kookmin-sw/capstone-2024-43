@@ -1,14 +1,13 @@
 import { requestAladin } from './aladin.mjs'
 
-// Test
-(async () => {
-    console.log("============Test Search============");
-    await requestAladin("search", "심너울")
-        .then(console.log);
-    console.log("===================================");
+export const handler = async (event, context, callback) => {
+    const res = {
+        "statusCode": 200,
+        "headers": {
+            "Content-Type": "*/*"
+        }
+    };
     
-    console.log("============Test LookUp============");
-    await requestAladin("lookUp", "9791168341760")
-        .then(console.log);
-    console.log("===================================");
-})()
+    res.body = await requestAladin(event.type, event.query);
+    callback(null, res);
+};
