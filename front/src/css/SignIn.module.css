@@ -7,7 +7,10 @@ html{
     height:80vh;
     min-width: 233px;
     margin:auto auto;
-    box-shadow: 0px 0px 5px #444;
+    /* box-shadow: 0px 0px 5px #444; */
+    border: solid 1px #000 ;
+    border-radius: 5px;
+    background-color: #fff;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,6 +22,17 @@ html{
     aspect-ratio: 1/1;
     background-image: url("../imgs/logo.svg");
     background-size: cover;
+}
+.signInLogoName{
+    font-size:3em;
+    padding-bottom: 10px;
+    
+}
+.logoNameBox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 .form{
     display: flex;
@@ -37,7 +51,7 @@ html{
     min-height:100px;
 }
 
-.toMainbutton{
+.toMainButton{
     border-radius: 48px;
     font-size :1.1em;
     border:1px solid #E3E5E5;
@@ -46,6 +60,12 @@ html{
     justify-content: center; /* 가로 중앙 정렬 */
     background-color: #fff;
     padding: 10px 35px;
+    font-family: 'GyeonggiBatang',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.toMainButton:hover{
+    cursor:pointer;
 }
 .googleButton{
     border-radius: 48px;
@@ -56,6 +76,10 @@ html{
     justify-content: center; /* 가로 중앙 정렬 */
     background-color: #fff;
     padding: 10px 35px;
+    
+}
+.googleButton:hover{
+    cursor: pointer;
 }
 .googleButton svg{
     margin-right: 10px; /* 로고와 텍스트 사이의 간격 조정 */
@@ -63,4 +87,9 @@ html{
 
 .googleButton span{
     font-size: 1.1em; /* 텍스트 글자 크기 조정 */
+    font-family:'GyeonggiBatang',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;font:'GyeonggiBatang',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }

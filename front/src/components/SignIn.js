@@ -52,7 +52,11 @@ function SignIn(){
         
     return (<>
     <div className={styles.signInBody}>
-        <div className={styles.logo}></div>
+        <div className={styles.logoNameBox}>
+        <span className={styles.signInLogoName}>"문향"</span>
+        <span className={styles.subLogoName}>문자의 향기를 찾아보세요</span>
+        </div>
+        {/* <div className={styles.logo}></div> */}
         <div className={styles.buttonBox}>
             {/* 메인화면으로 이동 버튼 */}
         <button className={styles.toMainButton}onClick={()=>{navigate('/')}}>메인화면으로 이동하기</button>
