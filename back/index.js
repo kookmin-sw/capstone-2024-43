@@ -147,7 +147,7 @@ app.post('/api/post/:postId',(req,res)=>{
     }
 
     //스포일러 필터링X 리뷰 result[0], 스포일러 필터링된 리뷰 result[1]
-    result.push(result[0]);
+    result.push({...result[0]});
     let a = result[0].name;
     let b = result[0].author;
     let c = a + ' ' + b;
