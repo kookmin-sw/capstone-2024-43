@@ -328,13 +328,13 @@ async function runQueries(UID, isFirst) {
                     `SELECT posts.*, books.author, books.name, books.filter FROM posts JOIN books ON posts.isbn = books.isbn WHERE postID NOT IN (${placeholders}) ORDER BY create_at DESC LIMIT 20` :
                     `SELECT posts.*, books.author, books.name, books.filter FROM posts JOIN books ON posts.isbn = books.isbn ORDER BY create_at DESC LIMIT 20`;
                 let result2 = await query(sqlQuery, excludedPostIDs);
-
+                
                 if (result2.length == 0) {
                     condition = false;
                     
                     break;
                 }
-
+                
                 // 다음 쿼리에서 제외할 postID 목록 업데이트
                 const newPostIDs = result2.map(post => post.postID);
                 excludedPostIDs = [...excludedPostIDs, ...newPostIDs];
