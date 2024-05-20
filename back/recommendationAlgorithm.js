@@ -384,9 +384,9 @@ async function runQueries(UID, isFirst) {
                 
                 for (let i = 0; i < obj2.length; i++) {
                     if (filter == '01') {//비문학 필터링
-                        if (obj2[i].filter == '문학') post_obj.push(obj2[i]);
+                        if (obj2[i] &&obj2[i].filter == '문학') post_obj.push(obj2[i]);
                     } else if (filter == '10') {//문학 필터링
-                        if (obj2[i].filter == '비문학') post_obj.push(obj2[i]);
+                        if (obj2[i] &&obj2[i].filter == '비문학') post_obj.push(obj2[i]);
                     } else {
                         post_obj.push(obj2[i]);
                     }

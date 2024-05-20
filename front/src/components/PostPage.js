@@ -208,6 +208,7 @@ function PostPage() {
   
   return (
     <div className="post-page-container">
+      <div>
         <input
           type="text"
           placeholder="제목을 입력하세요..."
@@ -216,6 +217,7 @@ function PostPage() {
           className="title-input"
         />
         <button className="post-search-button" onClick={handlePost}>포스팅</button>
+      </div>
       <div className="ck-editor__editable">
         <TextEditor initialData={editorData} setData={setEditorData} />
         {console.log(editorData)}

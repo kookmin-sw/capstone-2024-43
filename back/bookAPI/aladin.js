@@ -62,7 +62,7 @@ outputs:
 import { keys } from "./key.js";
 import { parseStringPromise } from "xml2js";
 
-function prettifyObject(obj) {
+export function prettifyObject(obj) {
     for (const key in obj) {
         if (Object.hasOwnProperty.call(obj, key) && Array.isArray(obj[key])) {
             if (obj[key].length == 1)

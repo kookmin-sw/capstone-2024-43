@@ -39,7 +39,8 @@ function NavButton(props) {
   } 
   function openModal(){
     console.log("open modal ")
-    setIsOpen(true);}
+    setIsOpen(true);
+  }
   function openModal2() {
     console.log("signIn please..")
     setIsOpen2(true);
@@ -52,8 +53,28 @@ function NavButton(props) {
     else if (nav=== 'post') return postImg;
     else if (nav=== 'logo') return logoImg;
   }
-  const image = selectImage();
+  //const image = selectImage();
+  const image = {
+    filter : <svg width="52" height="52" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.46154 6H14.5385M1 1H17M7.15385 11H10.8462" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    ,
+    more:<svg width="52" height="52" viewBox="0 0 22 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.8 3.4C5.8 4.72548 4.72548 5.8 3.4 5.8C2.07452 5.8 1 4.72548 1 3.4C1 2.07452 2.07452 1 3.4 1C4.72548 1 5.8 2.07452 5.8 3.4Z" stroke="black" stroke-width="2"/><path d="M13 3.4C13 4.72548 11.9255 5.8 10.6 5.8C9.27452 5.8 8.2 4.72548 8.2 3.4C8.2 2.07452 9.27452 1 10.6 1C11.9255 1 13 2.07452 13 3.4Z" stroke="black" stroke-width="2"/><path d="M20.2 3.4C20.2 4.72548 19.1255 5.8 17.8 5.8C16.4745 5.8 15.4 4.72548 15.4 3.4C15.4 2.07452 16.4745 1 17.8 1C19.1255 1 20.2 2.07452 20.2 3.4Z" stroke="black" stroke-width="2"/></svg>
+    ,
+    library:<svg width="52" height="52" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.7999 1.3999H3.53324C2.35503 1.3999 1.3999 2.35503 1.3999 3.53324V14.1999V18.4666C1.3999 19.6448 2.35503 20.5999 3.53324 20.5999H14.1999H18.4666C19.6448 20.5999 20.5999 19.6448 20.5999 18.4666V7.7999V3.53324C20.5999 2.35503 19.6448 1.3999 18.4666 1.3999H7.9999M6.7999 8.16513V6.99514M15.1999 8.16513V6.99514M7.65256 14.6001C9.02072 15.6602 12.0888 15.6602 14.0006 14.6001M10.3999 11.6751L10.6484 11.4328C10.8735 11.2134 10.9999 10.9158 10.9999 10.6055V7.58014" stroke="black" stroke-width="2" stroke-linecap="round"/></svg>
+    ,
+    post:<svg width="52" height="52" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2 5.2H5.22812M8.8 5.2H8.82812M15.9719 5.2H16M12.4 5.2H12.4281M7 8.8H7.02812M10.6 8.8H10.6281M14.2 8.8H14.2281M3.4 13H17.8C19.1255 13 20.2 11.9255 20.2 10.6V3.4C20.2 2.07452 19.1255 1 17.8 1H3.4C2.07452 1 1 2.07452 1 3.4V10.6C1 11.9255 2.07452 13 3.4 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    ,
+    logo:<svg width="52" height="52" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.3999 19.2058L2.72011 17.794C4.61414 19.7116 7.24477 20.4587 10.1529 20.4587C15.9226 20.4587 20.5999 15.7815 20.5999 10.0118C20.5999 7.15025 19.4494 4.55744 17.5858 2.67066L18.9056 1.54126M16.3468 9.69412C16.3468 13.4464 13.305 16.4882 9.55276 16.4882C5.80051 16.4882 2.75871 13.4464 2.75871 9.69412C2.75871 5.94187 5.80051 2.90007 9.55276 2.90007C13.305 2.90007 16.3468 5.94187 16.3468 9.69412Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    ,
 
+  }
+  const imageName = {
+    filter : "필터",
+    more:  "더보기",
+    library: "서재",
+    post: "글쓰기",
+    logo: "\"문향\"",
+
+  }
   //여기서 부터 모달 관리
   let subtitle="modal";
   const [isOpen, setIsOpen] = useState(false);
@@ -129,8 +150,9 @@ function NavButton(props) {
   return (
     <>
     <span id={styles.buttonBody} onClick={onclickHandler}>
-       <img id={styles.img}src={image} alt={nav}/>
-       <span id={styles.buttonName}>{nav==='logo'?null:nav}</span>
+      {/* {image[`${nav}`]} */}
+       {/* <img id={styles.img}src={image} alt={nav}/> */}
+       <span id={styles.buttonName}>{imageName[nav]}</span>
     </span>
       
     <div id="modalContainer">

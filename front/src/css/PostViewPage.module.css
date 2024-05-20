@@ -6,6 +6,7 @@ html{
 .postBox{
     /* border: solid 1px #000 ; */
     width:50vw;
+    min-width: 320px;
     min-height: 50vh;
     margin: 30px auto;
     padding: 30px;
