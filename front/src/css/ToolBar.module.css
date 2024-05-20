@@ -10,7 +10,9 @@
     position:fixed;
     top:0;
 
-    border-bottom: 1px solid #181818;
+    /* border-bottom: 1px solid #181818; */
+    /* border-radius: 0px 0px 20px 20px; */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
 .box{
     display:flex;
@@ -29,15 +31,15 @@
     flex-grow: 1;
     align-items: center;
 }
-@media (min-width: 600px) {
-     #logoBox { 
-        position:absolute;
-        transform: translateX(-50%);
-        left:50vw;
-        transform: translateY(-50%);
-        top:5vh;
-     } 
+@media (min-width: 800px) {
+    #logoBox { 
+        position: absolute;
+        top: 5vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
 }
+
 
 #rBox{
     justify-content: flex-end;

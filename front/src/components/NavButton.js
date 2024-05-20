@@ -152,7 +152,7 @@ function NavButton(props) {
     <span id={styles.buttonBody} onClick={onclickHandler}>
       {/* {image[`${nav}`]} */}
        {/* <img id={styles.img}src={image} alt={nav}/> */}
-       <span id={styles.buttonName}>{imageName[nav]}</span>
+       <span id={styles.buttonName} name={nav}>{imageName[nav]}</span>
     </span>
       
     <div id="modalContainer">

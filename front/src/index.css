@@ -13,6 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: none;/* 마이크로소프트 브라우저 스크롤바 없애기 */
+  background-color: #dedede;
   }
   
  ::-webkit-scrollbar {/* WebKit 기반 브라우저(예: 크롬, 사파리) 스크롤바 없애기 */

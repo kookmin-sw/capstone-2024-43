@@ -6,6 +6,7 @@
     height:auto;
     transition: background-color 0.5s ease;
     border-radius: 8px;
+    
 }
 @media (max-width: 600px) {
     #buttonBody{
@@ -19,6 +20,10 @@
 #buttonName{
     text-align: center;
     font-size:2em;
+}
+#buttonName[name="logo"]{
+    font-size: 3em;
+    font-weight:600;
 }
 #img{
     width:32px;
