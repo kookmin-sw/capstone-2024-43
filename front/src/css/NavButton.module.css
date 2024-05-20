@@ -19,10 +19,10 @@
 }
 #buttonName{
     text-align: center;
-    font-size:2em;
+    font-size:1em;
 }
 #buttonName[name="logo"]{
-    font-size: 3em;
+    font-size: 2em;
     font-weight:600;
 }
 #img{
