@@ -16,8 +16,7 @@
     justify-content: space-evenly;
 }
 .buttonBox div{
-    width:40px;
-    aspect-ratio: 1/1;
+    margin-bottom: 10px;
 }
 .libraryBox{
     width:91vw;
@@ -32,6 +31,11 @@
     flex-flow: row wrap;
     align-items: center;
     border:5px solid darkcyan;
+}
+.postsContainer span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .postBox{
     border:0.5px solid green;

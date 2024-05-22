@@ -22,3 +22,8 @@ html{
     transform-origin: 50% 50%;
     opacity: 0.4;
 }
+@media (max-width: 600px) {
+    .listEnd{
+        width:3.6vw;
+    }
+}

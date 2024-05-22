@@ -12,7 +12,6 @@ function PostViewPage() {
   const [_li, set_Li] = useState([]);
   const [bookInfoContainerDisplay, setbookInfoContainerDisplay] = useState("none");
   const [buttonDisplay, setButtonDisplay] = useState("block");
-  const [bookData, setBookData] = useState({});
   const UID = (localStorage.getItem('UID')) == null ? 'null' : localStorage.getItem('UID');
   const navigate = useNavigate();
   const [selectedBody,setSelectedBody]=useState({body:""});
@@ -21,7 +20,7 @@ function PostViewPage() {
     changeBlurBoxState();//blurBox state변경
     set_Li([]); // postId가 변경될 때마다 _li 상태 초기화
     if (postId) { // postID가 존재하는 경우에만 fetch 요청 보냄
-      fetch(`http://localhost:8080/api/post/${postId}`, {
+      fetch(`/api/post/${postId}`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -81,7 +80,7 @@ function PostViewPage() {
 
   function handleDelete() {
     if (postId) {
-      fetch(`http://localhost:8080/api/post/${postId}`, {
+      fetch(`/api/post/${postId}`, {
         method: 'DELETE',
       })
         .then(res => {
@@ -95,20 +94,6 @@ function PostViewPage() {
         .catch(error => console.error('포스트를 삭제하는데 오류가 발생했습니다:', error));
     }
   }
-
-
-  function fetchBookInfo(isbn) {
-    if (isbn) {
-      fetch(`http://localhost:8080/api/books/search/${isbn}`)
-        .then(res => res.json())
-        .then(json => {
-          console.log("bookData:", json);
-          setBookData(json[0]);
-        })
-        .catch(error => console.log(error));
-    }
-  }
-
 
   return (
     <>

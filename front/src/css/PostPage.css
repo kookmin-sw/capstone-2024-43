@@ -13,12 +13,20 @@
   height: 70px; 
 }
 
-/*정해진 .ck-editor__editable를 써야 content style을 자유롭게 편집 가능.*/
-.ck-editor__editable { 
-  margin-left: auto;
-  margin-right: auto;
-  width: 98.5%;
-  height: 350px; 
+.editor-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ck ck-sticky-panel {
+  width: inherit;
+}
+
+.ck-editor__editable {
+  width: inherit;
+  height: 350px;
 }
 
 .button-container {

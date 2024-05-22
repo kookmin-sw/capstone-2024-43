@@ -19,6 +19,8 @@ html{
     margin:10vh 0;
 }
 .bookInfoBox{
+    background-color: #fff;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,6 +30,11 @@ html{
     padding:8px;
     margin: 30px auto;
     overflow: hidden; /* 내부 요소가 벗어나지 않도록 처리 */
+}
+@media (max-width: 600px) {
+    .bookInfoBox{
+        width:100vw;
+    }
 }
 
 ul{

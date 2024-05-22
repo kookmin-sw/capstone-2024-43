@@ -40,6 +40,8 @@ function MorePage() {
                 <div className={styles.libraryBox}>
                     <h2>내 서재</h2>
                     <div className={styles.postsContainer}>
+                        {console.log(posts.length)}
+                        {posts.length===0  &&  <span>작성된 후기가 없습니다. 후기를 작성해보세요</span>}
                         {posts.map(post => (
                             <div key={post.postID} 
                                 className={styles.postBox} 

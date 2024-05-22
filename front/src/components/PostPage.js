@@ -35,7 +35,7 @@ function PostPage() {
   useEffect(() => {
     if (postId) {
       // postId를 사용하여 해당 글의 정보를 가져옴
-      fetch(`http://localhost:8080/api/postpage/${postId}`)
+      fetch(`/api/postpage/${postId}`)
         .then(res => res.json())
         .then(json => {
           // 데이터가 있을 경우 해당 데이터를 적절히 처리하여 state에 저장
@@ -98,7 +98,7 @@ function PostPage() {
         //수정하는 경우 기존 포스트를 삭제하고 새로 포스트 아이디를 발급함.
         //아이디를 현재 시간을 기준으로 하기 때문. 
         if (postId) {
-          fetch(`http://localhost:8080/api/post/${postId}`, {
+          fetch(`/api/post/${postId}`, {
             method: 'DELETE'
           })
             .then(res => res.json())
@@ -218,9 +218,11 @@ function PostPage() {
         />
         <button className="post-search-button" onClick={handlePost}>포스팅</button>
       </div>
-      <div className="ck-editor__editable">
-        <TextEditor initialData={editorData} setData={setEditorData} />
-        {console.log(editorData)}
+      <div className="editor-container">
+        <div className="ck ck-sticky-panel ck-editor__editable">
+          <TextEditor initialData={editorData} setData={setEditorData} />
+          {console.log(editorData)}
+        </div>
       </div>
        <div className="book-search-container">
         <input

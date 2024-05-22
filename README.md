@@ -5,7 +5,7 @@
 
 This project participated in the Capstone Design course conducted by the College of Software Convergence at Kookmin University in 2024. (March 8, 2024 - May 27, 2024)
 The project 'Moonhyang' is a web service that recommends books through reviews.
-(포스터 추가 예정)
+![포스터](https://github.com/kookmin-sw/capstone-2024-43/assets/85778340/a41b83c4-87e4-40e2-85f5-90e1bd853077)
 ## 👯팀소개
 <table>
   <tr>
@@ -69,14 +69,31 @@ The project 'Moonhyang' is a web service that recommends books through reviews.
 ### 영상
 (영상 첨부 예정)
 ### 시스템 구조도
-(구조도 추가 예정)
+![구조도](https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/e4180832-a12b-4060-873c-8f731a828626)
+
 ### ERD
-(ERD 추가 예정)
+<table>
+<tr>
+  <th>데이터 베이스 스키마의 변천사</th>
+  <th>데이터 베이스 최종</th>
+</tr>
+<tr>
+  <td>
+    <img src="https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/368b2b4a-eb1e-4059-b1c5-f35d0df64e87" width=500></img>
+  </td>
+  <td>
+    <img src="https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/12435914-8d28-4112-9d73-a613c3d5ef14" width=500></img>
+  </td>
+</tr>
+</table>
+
 ## 📂자료 모음
 + [중간 발표 ppt 링크](https://docs.google.com/presentation/d/1ic5l_8z1M0HQEwmwFP-ypbiUW4xSqV5K/edit?usp=sharing&ouid=105885965673341678510&rtpof=true&sd=true)
 + [중간 보고서 링크](https://drive.google.com/file/d/1l0D16GhmAhauXRc-k0WA7jpPQSjQLIb-/view?usp=sharing)
 + [기말 발표 ppt 링크]()
 + [기말 보고서 링크]()
++ [포스터 링크](https://drive.google.com/file/d/1H5UpHAELGMGlb4UcnMhP-kMgnYlS9RY3/view?usp=drivesdk)
+
 
 ## 🪡사용한 기술
 

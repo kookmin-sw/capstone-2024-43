@@ -11,6 +11,12 @@ function MoreButton({nav}){// 'modifyInfo''announcement''contactUs''signOut'
         contactUs:<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.4811 6.07196L11.4811 17.2812C11.4811 20.3321 9.37344 22.8 6.26282 22.8C3.2119 22.8 1.2002 20.3918 1.2002 17.2812L1.20019 4.68084C1.20019 2.75238 2.75252 1.20005 4.68099 1.20005C6.60945 1.20005 8.16178 2.75238 8.16178 4.68084L8.16178 17.5025C8.16178 18.4636 7.38258 19.2428 6.42139 19.2428C5.46019 19.2428 4.68099 18.4636 4.68099 17.5025L4.68099 6.07196" stroke="black" stroke-width="2" stroke-linecap="round"/></svg>,
         modifyInfo:<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.3999 19.5124C1.3999 15.7369 4.55419 12.6762 10.9999 12.6762C17.4456 12.6762 20.5999 15.7369 20.5999 19.5124C20.5999 20.1131 20.1617 20.6 19.6211 20.6H2.37873C1.83814 20.6 1.3999 20.1131 1.3999 19.5124Z" stroke="black" stroke-width="2"/><path d="M14.5999 5.00002C14.5999 6.98825 12.9881 8.60002 10.9999 8.60002C9.01168 8.60002 7.3999 6.98825 7.3999 5.00002C7.3999 3.0118 9.01168 1.40002 10.9999 1.40002C12.9881 1.40002 14.5999 3.0118 14.5999 5.00002Z" stroke="black" stroke-width="2"/></svg>,
     }
+    const svgName={
+        modifyInfo:"내 정보 수정",
+        announcement:"공지사항",
+        contactUs:"개발 팀",
+        signOut:"로그아웃",
+    }
     const handleClickFunction={
         modifyInfo:()=>{},
         announcement:()=>{navigate('/announcement')},
@@ -23,7 +29,8 @@ function MoreButton({nav}){// 'modifyInfo''announcement''contactUs''signOut'
     }
     return (<>
     <div className={styles.MoreButton} onClick={handleClickFunction[nav]}>
-        {svg[nav]}
+        <span>{svgName[nav]}</span>
+        {/* {svg[nav]} */}
     </div>
     </>);
 }

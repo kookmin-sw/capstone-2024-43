@@ -1,3 +1,6 @@
 .MoreButton:hover{
     cursor:pointer;
 }
+.MoreButton span{
+    text-decoration: underline;
+}
