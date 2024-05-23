@@ -51,7 +51,7 @@ ul{
 .buttoncontainer {
     display: auto;
 }
-.editButtons {
+/* .editButtons {
     flex: 1;
     align-items: center;
     border: 1px solid white;
@@ -59,4 +59,10 @@ ul{
     margin-right: 10px;
     height: 30px; 
     width: 100px;
+} */
+.editButtons{
+    border-radius: 45px;
+}
+.editButtons:hover{
+    background-color: #fff;
 }
