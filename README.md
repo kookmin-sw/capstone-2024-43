@@ -90,7 +90,7 @@ The project 'Moonhyang' is a web service that recommends books through reviews.
 ## 📂자료 모음
 + [중간 발표 ppt 링크](https://docs.google.com/presentation/d/1ic5l_8z1M0HQEwmwFP-ypbiUW4xSqV5K/edit?usp=sharing&ouid=105885965673341678510&rtpof=true&sd=true)
 + [중간 보고서 링크](https://drive.google.com/file/d/1l0D16GhmAhauXRc-k0WA7jpPQSjQLIb-/view?usp=sharing)
-+ [기말 발표 ppt 링크]()
++ [기말 발표 ppt 링크](https://docs.google.com/presentation/d/1_EujXZl0d5-0x8BpDiMyStcsPK1ZAOjS/edit?usp=drive_link&ouid=105885965673341678510&rtpof=true&sd=true)
 + [기말 보고서 링크](https://drive.google.com/file/d/1W1lsjPazmIRATs0N1Vv_Xoay_yFxtVjt/view?usp=sharing)
 + [포스터 링크](https://drive.google.com/file/d/1H5UpHAELGMGlb4UcnMhP-kMgnYlS9RY3/view?usp=drivesdk)
 
