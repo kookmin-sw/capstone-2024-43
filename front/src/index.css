@@ -23,14 +23,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-button ,input[type=submit]{
+button ,input[type=submit],input[type=button]{
   border: 0;
   background-color: transparent;
   font-family: 'GyeonggiBatang',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   text-decoration: underline;
+  border-radius: 45px;
 }
-button:hover , input[type=submit]:hover{
+button:hover , input[type=submit]:hover ,input[type=button]:hover{
   cursor:pointer;
+  background-color: #dfdfdf; 
 }

@@ -1,6 +1,11 @@
 .MoreButton:hover{
     cursor:pointer;
+    background-color: #fff; 
 }
 .MoreButton span{
     text-decoration: underline;
+    
+}
+.MoreButton{
+    border-radius: 45px;
 }

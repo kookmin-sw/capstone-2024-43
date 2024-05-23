@@ -1,23 +1,56 @@
+*{
+  box-sizing: border-box;
+}
+.postPageRootContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100vw;
+  min-height:90vh;
+  /* background-color: antiquewhite; */
+}
 .post-page-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width:50vw;
+  height: 100%;
+  background-color: #fff;
+}
+@media(max-width:600px){
+  .post-page-container{
+    width:100vw;
+  }
+}
+.titleContainer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
   align-items: center;
 }
 
 .title-input {
-  display: auto;
+  /* display: auto; */
   border: 1px solid white;
   font-size: 24px;
-  margin-right: 20px; 
-  margin-left: 20px;
-  height: 70px; 
+  /* margin-right: 20px;  */
+  /* margin-left: 20px; */
+  height: 70px;
+  width:100%;
+  /* text-decoration: underline; */
 }
-
+.post-search-button{
+  min-width: 60px;
+}
 .editor-container {
-  width: 60%;
-  display: flex;
+  width: 100%;
+  /* min-height: 300px; */
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  border-bottom: 1px solid #f0f0f0;
+  overflow: hidden;
 }
 
 .ck ck-sticky-panel {
@@ -26,29 +59,20 @@
 
 .ck-editor__editable {
   width: inherit;
-  height: 350px;
+  height: 50vh;
+  /* min-height: 300px;
+  max-height: 50vh; */
+  overflow:visible;
 }
 
-.button-container {
-  display: auto;
-}
-
-.post-search-button {
-  flex: 1;
-  align-items: center;
-  border: 1px solid white;
-  background-color: gainsboro;
-  margin-right: 10px;
-  height: 30px; 
-  width: 100px;
-}
 
 .book-search-input {
-  display: auto;
+  /* display: auto; */
   border: 1px solid white;
   font-size: 24px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   margin-top: 41px; 
+  width:100%;
 }
 
 /* 검색된 책 목록 */

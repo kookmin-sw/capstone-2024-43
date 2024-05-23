@@ -207,11 +207,12 @@ function PostPage() {
 
   
   return (
+    <div className='postPageRootContainer'>
     <div className="post-page-container">
-      <div>
+      <div className='titleContainer'>
         <input
           type="text"
-          placeholder="제목을 입력하세요..."
+          placeholder="제목을 입력하세요"
           value={title}
           onChange={handleTitleChange}
           className="title-input"
@@ -224,15 +225,16 @@ function PostPage() {
           {console.log(editorData)}
         </div>
       </div>
-       <div className="book-search-container">
+       <div className="titleContainer">
         <input
           type="text"
-          placeholder="책 검색..."
+          placeholder="책 제목,isbn으로 검색"
           value={bookSearch}
           onChange={handleBookSearchChange}
-          className="book-search-input"
+          className="title-input"
         />
         <button className="post-search-button" onClick={searchBookByName}>검색</button>
+        {/* <button className="post-search-button" onClick={()=>{setSearchedBooks([])}}>확인</button> */}
       </div>
       <div className="searched-books">
         {searchedBooks.map(book => (
@@ -243,6 +245,7 @@ function PostPage() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

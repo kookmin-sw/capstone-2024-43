@@ -13,6 +13,7 @@ function PostViewPage() {
   const [bookInfoContainerDisplay, setbookInfoContainerDisplay] = useState("none");
   const [buttonDisplay, setButtonDisplay] = useState("block");
   const UID = (localStorage.getItem('UID')) == null ? 'null' : localStorage.getItem('UID');
+  const [postUID,setPostUID] = useState('');
   const navigate = useNavigate();
   const [selectedBody,setSelectedBody]=useState({body:""});
   useEffect(() => {
@@ -33,6 +34,7 @@ function PostViewPage() {
           //console.log("json[0]:", json[0]);
           //setData(json[0]);
           setData([json[0],json[1]]);
+          setPostUID(json[0].UID);
           setSelectedBody(json[0]);
           console.log("setSB: ",json[0]);
           return json[0];
@@ -103,7 +105,8 @@ function PostViewPage() {
           {data ? (
            <>
             {/* {<h1>{data.title}</h1>} */}
-            {UID && data.UID && (UID.toString() === data.UID.toString()) && (
+            {console.log('postviewpage uid test\nUID: ',UID,' postUID: ',postUID)}
+            {UID && postUID && (UID.toString() === postUID.toString()) && (
               <div className={styles.buttoncontainer}>
                 <button className={styles.editButtons} onClick={handleEdit}>수정</button>
                 <button className={styles.editButtons} onClick={handleDelete}>삭제</button>
