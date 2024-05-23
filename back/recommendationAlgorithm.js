@@ -255,7 +255,7 @@ async function runQueries(UID, isFirst) {
 
     //데이터베이스에서 유저가 본 리뷰를 시간 순으로 10개를 가져옴
     if (UID != null) {
-        const user_history = `SELECT * FROM history JOIN posts ON history.postID = posts.postID WHERE history.UID = "${UID}" ORDER BY watch_at DESC LIMIT 10`;
+        const user_history = `SELECT * FROM history JOIN test ON history.postID = test.postID WHERE history.UID = "${UID}" ORDER BY watch_at DESC LIMIT 10`;
         const modal_filter = `SELECT filter FROM users WHERE UID = "${UID}"`;
         const results = await query(user_history);
         let filter_obj = await query(modal_filter);
@@ -288,8 +288,8 @@ async function runQueries(UID, isFirst) {
             const placeholders = excludedPostIDs.map(() => '?').join(',');
             const sqlQuery = placeholders ?
                 //데이터베이스에서 최근 작성된 리뷰들을 20개씩 가져옴
-                `SELECT posts.*, books.author, books.name, books.filter FROM posts JOIN books ON posts.isbn = books.isbn WHERE postID NOT IN (${placeholders}) ORDER BY create_at DESC LIMIT 20` :
-                `SELECT posts.*, books.author, books.name, books.filter FROM posts JOIN books ON posts.isbn = books.isbn ORDER BY create_at DESC LIMIT 20`;
+                `SELECT test.*, books.author, books.name, books.filter FROM test JOIN books ON test.isbn = books.isbn WHERE postID NOT IN (${placeholders}) ORDER BY create_at DESC LIMIT 20` :
+                `SELECT test.*, books.author, books.name, books.filter FROM test JOIN books ON test.isbn = books.isbn ORDER BY create_at DESC LIMIT 20`;
             let result2 = await query(sqlQuery, excludedPostIDs);
 
             if (result2.length != 0) {
@@ -325,8 +325,8 @@ async function runQueries(UID, isFirst) {
                 
                 //데이터베이스에서 모달 카테고리로 필터링한 후 최근 작성된 리뷰들을 20개씩 가져옴
                 const sqlQuery = placeholders ?
-                    `SELECT posts.*, books.author, books.name, books.filter FROM posts JOIN books ON posts.isbn = books.isbn WHERE postID NOT IN (${placeholders}) ORDER BY create_at DESC LIMIT 20` :
-                    `SELECT posts.*, books.author, books.name, books.filter FROM posts JOIN books ON posts.isbn = books.isbn ORDER BY create_at DESC LIMIT 20`;
+                    `SELECT test.*, books.author, books.name, books.filter FROM test JOIN books ON test.isbn = books.isbn WHERE postID NOT IN (${placeholders}) ORDER BY create_at DESC LIMIT 20` :
+                    `SELECT test.*, books.author, books.name, books.filter FROM test JOIN books ON test.isbn = books.isbn ORDER BY create_at DESC LIMIT 20`;
                 let result2 = await query(sqlQuery, excludedPostIDs);
                 
                 if (result2.length == 0) {
