@@ -43,7 +43,7 @@ function ScrollView() {
             postID: postId,
             UID: UID,
           };
-          fetch("http://localhost:8080/api/ScrollView", {
+          fetch("/api/ScrollView", {
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
