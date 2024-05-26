@@ -65,9 +65,32 @@ The project 'Moonhyang' is a web service that recommends books through reviews.
 
 ## 📢주요 기능 , 시스템 구조 소개
 ### 사진
-(사진 첨부 예정)
+<table>
+  <tr>
+    <th>후기 본문</th>
+    <th>책 정보 확인 버튼off</th>
+    <th>책 정보 확인 버튼on</th>
+    <th>후기 작성</th>
+    <th>책 검색</th>
+    <th>내 서재(후기)</th>
+  </tr>
+  <tr>
+    <td>
+      <img src=https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/2965d626-897d-441b-b6c1-6345f4884c19 width=200>
+    </td>
+    <td><img src=https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/cf5fd1a9-1fd4-4443-bd56-6c51b5a44831
+width=200></td>
+    <td><img src=https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/f2b144b6-f857-40db-8795-88a1cbb1d3ab width=200></td>
+    <td><img src=https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/60ea2a3a-45c6-4b3b-bee2-78d442f89407 width =200></td>
+    <td><img src=https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/6a5a55e3-d7ed-4136-be4d-ad43af1e7bd0 width=200></td>
+    <td>
+      <img src=https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/eb1135ea-b5f3-4e17-897f-77bb96d75ffc width=200></td>
+    </tr>
+</table>
+
 ### 영상
 (영상 첨부 예정)
+
 ### 시스템 구조도
 ![구조도](https://github.com/kookmin-sw/capstone-2024-43/assets/59199893/e4180832-a12b-4060-873c-8f731a828626)
 
